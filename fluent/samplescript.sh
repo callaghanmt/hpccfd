@@ -23,5 +23,6 @@ export ANSYSLMD_LICENSE_FILE=1055@***.leeds.ac.uk
 #$ -M issmcal@leeds.ac.uk
 
 # Open Fluent and read input file.
-fluent -g -i input 3ddp -pib -sgeup -mpi=openmpi -rsh=ssh
+# Use these options for versions of Fluent greater than 16.0
+fluent 3ddp -g -i input -pib -sgeup -mpi=openmpi -rsh=ssh
 # --------------------- End of script ----------------------
