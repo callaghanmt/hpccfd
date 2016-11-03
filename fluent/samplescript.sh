@@ -15,7 +15,7 @@
 #$ -l np=8
 
 # get fluent licenses.
-module load ansys/14.5.7
+module load ansys/17.1
 export ANSYSLMD_LICENSE_FILE=1055@***.leeds.ac.uk
 
 # Email me after execution of job.
@@ -23,5 +23,5 @@ export ANSYSLMD_LICENSE_FILE=1055@***.leeds.ac.uk
 #$ -M issmcal@leeds.ac.uk
 
 # Open Fluent and read input file.
-fluent -g -i input 3ddp -pib -sgeup
+fluent -g -i input 3ddp -pib -sgeup -mpi=openmpi -rsh=ssh
 # --------------------- End of script ----------------------
